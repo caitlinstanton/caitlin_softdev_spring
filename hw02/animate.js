@@ -1,64 +1,39 @@
-var c = document.getElementById("playground");
-var ctx = c.getContext("2d");
-var r = document.getElementById("clear");
+var size = 538;
+var canvas = document.getElementById("playground");
+var ctx = canvas.getContext("2d");
 
-var x;
-var y;
-var count = 0;
-var s = 0;
-
-ctx.beginpath();
-ctx.arc(c.width/2,c.height/2,radius,0,2*Math.PI);
-ctx.stroke();
-ctx.fill();
-
-window.requestAnimationFrame( drawDot );
-
-function setup(){
-    ctx.strokeRect(0,0,538,538); 
+//Clear
+var clear = function clear() {
+    ctx.fillStyle = "#ffffff";
+    ctx.strokeStyle = "#000000";
+    ctx.clearRect(0,0,size,size);
+    ctx.strokeRect(0,0,size,size);
 }
 
-function make(event) {
-
-    event.preventDefault();   
-
-    ctx.strokeRect(0,0,538,538); 
-
-    if (count == 1) {
-	var x1 = x;
-	var y1 = y;
-    }
-
-    x = event.clientX-9;
-    y = event.clientY-70;
-
+//Circle
+var circle = function circle(radius) {
+    ctx.fillStyle = "#ff0000";
+    ctx.strokeStyle = "#000000";
     ctx.beginPath();
-    ctx.arc(x,y,15,0,2*Math.PI);
-    ctx.stroke();
-    ctx.fillStyle = "blue";
-    ctx.fill();    
-    ctx.closePath();
- 
-    if (count = 1) {
-	ctx.moveTo(x1,y1);
-	ctx.beginPath();
-	ctx.lineTo(x1,y1);
-	ctx.lineTo(x,y);
-	ctx.stroke();
-	ctx.closePath();
+    ctx.arc(size/2, size/2, radius, 0, 2*Math.PI)
+    ctx.fill();
+}
+
+//Animate Circle
+var radius = 1;
+var delta = 1;
+var animation = function animation() {
+    radius = radius + delta;
+    if (Math.abs(size/4 - radius) > size/4) {
+	delta = 0 - delta;
+	radius = radius + delta;
     }
-    
-    if (count == 0)
-	count = 1;
+    clear();
+    circle(radius);
+    window.requestAnimationFrame(animation);
 }
 
-var empty = function empty(event){
-    event.preventDefault();
-    ctx.clearRect(0,0,538,538);
-    ctx.strokeRect(0,0,538,538); 
-    count = 0;
-}
-
-setup();
-c.addEventListener("click", make);
-r.addEventListener("click", empty);
+document.getElementById("start").addEventListener("click", animation);
+document.getElementById("stop").addEventListener("click", clear);
+//Draws the border of the canvas for initialization
+clear();
