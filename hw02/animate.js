@@ -1,39 +1,52 @@
-var size = 538;
-var canvas = document.getElementById("playground");
-var ctx = canvas.getContext("2d");
+/*
+	Caitlin Stanton
+	SoftDev pd 3
+	HW 2 -- Circular
+	2016-02-23
+*/
 
-//Clear
-var clear = function clear() {
-    ctx.fillStyle = "#ffffff";
-    ctx.strokeStyle = "#000000";
-    ctx.clearRect(0,0,size,size);
-    ctx.strokeRect(0,0,size,size);
-}
+var c = document.getElementById("playground");
+var ctx = c.getContext("2d");
+var clear = document.getElementById("clear");
 
-//Circle
-var circle = function circle(radius) {
-    ctx.fillStyle = "#ff0000";
-    ctx.strokeStyle = "#000000";
-    ctx.beginPath();
-    ctx.arc(size/2, size/2, radius, 0, 2*Math.PI)
-    ctx.fill();
-}
+var radius = 0;
+var growing = true;
+var startDraw = document.getElementById("start");
+var endDraw = document.getElementById("stop");
 
-//Animate Circle
-var radius = 1;
-var delta = 1;
-var animation = function animation() {
-    radius = radius + delta;
-    if (Math.abs(size/4 - radius) > size/4) {
-	delta = 0 - delta;
-	radius = radius + delta;
-    }
-    clear();
-    circle(radius);
-    window.requestAnimationFrame(animation);
-}
+var requestID;
 
-document.getElementById("start").addEventListener("click", animation);
-document.getElementById("stop").addEventListener("click", clear);
-//Draws the border of the canvas for initialization
-clear();
+function drawDot() {
+
+  ctx.clearRect(0,0,c.width,c.height);
+  ctx.strokeRect(0,0,c.width,c.height);
+
+  if (growing == true) {
+    radius = radius + 1;
+  }
+  else {
+    radius = radius-1;
+  }
+	if (radius >= (c.width/2)) {
+		growing=false;
+  }
+	if (radius <= 0) {
+		growing=true;
+	}
+	ctx.beginPath();
+	ctx.arc(c.width/2, c.height/2, radius, 0, 2*Math.PI);
+	ctx.stroke();
+	ctx.fill();
+
+	requestID = window.requestAnimationFrame(drawDot);
+};
+
+function stop() {
+  ctx.clearRect(0,0,c.width,c.height); //clear canvas
+  growing = false;
+  radius = 0;
+  window.cancelAnimationFrame(requestID);
+};
+
+startDraw.addEventListener("click", drawDot);
+endDraw.addEventListener("click", stop);
