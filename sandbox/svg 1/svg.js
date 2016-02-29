@@ -7,4 +7,4 @@ c.setAttribute("r", "100");
 c.setAttribute("fill","red");
 c.setAttribute("stroke","black");
 
-pic.appendChild(C)
+pic.appendChild(c);
