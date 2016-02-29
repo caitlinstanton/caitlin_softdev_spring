@@ -21,3 +21,5 @@ var clicked = function(e) {
 		drawDot(e.offsetX, e.offsetY);
 	}
 };
+
+pic.addEventListener("click", clicked);
