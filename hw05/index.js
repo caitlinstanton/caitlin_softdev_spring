@@ -65,19 +65,6 @@ var republicans = [
     {state: "SD", count: 29, allocated: 0}
 ];
 
-var textWithBreaks = function(d) {
-    var bar = d3.select(this);
-    var words = d.state + " | Total: " + d.count + "\n" + " | Allocated: " + d.allocated + "\n" + " | Not Allocated: " + (d.count - d.allocated);
-    words = words.split("\n");
-    bar.text('');
-    for (var i = 0; i< words.length; i++) {
-        var tspan = bar.append('tspan').text(words[i]);
-        if (i > 0) { 
-            tspan.attr('x', 0).attr('dy', '15');
-        }
-    }
-};
-
 d3.select(".chart")
     .selectAll("div")
     .data(republicans)
@@ -92,7 +79,9 @@ d3.select(".chart")
             return "black";
         }
     })
-    .each(textWithBreaks);
+    .text(function(d) {
+        return d.state + ": " + d.count;
+    });
 
 
     
