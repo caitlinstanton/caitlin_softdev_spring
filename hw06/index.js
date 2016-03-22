@@ -3,147 +3,111 @@ var data = [
 				[
 					//Allocated
 					[
-						{state: "Iowa"},
-						{state: "New Hamphsire"}, 
-						{state: "South Carolina"}, 
-						{state: "Nevada"},
-						{state: "Alabama"},
-						{state: "Alaska"},
-		       			{state: "Arkansas"}, 
-		       			{state: "Georgia"}, 
-		       			{state: "Massachuetts"}, 
-		       			{state: "Minnesota"}, 
-		       			{state: "Oklahoma"},
-		      	 		{state: "Tennessee"}, 
-		      	 		{state: "Texas"}, 
-		      	 		{state: "Vermont"}, 
-		      	 		{state: "Virginia"}, 
-		      	 		{state: "Kansas"}, 
-		      	 		{state: "Kentucky"},
-		       			{state: "Louisiana"}, 
-		       			{state: "Maine"}, 
-		       			{state: "Puerto Rico"}, 
-		       			{state: "Hawaii"}, 
-		       			{state: "Idaho"}, 
-		       			{state: "Michigan"},
-		       			{state: "Mississippi"}, 
-		       			{state: "Washington DC"}, 
-		       			{state: "Guam"}, 
-		       			{state: "Wyoming"},
-		       			{state: "Florida"}, 
-		       			{state: "Illinois"}, 
-		       			{state: "Missouri"}, 
-		       			{state: "North Carolina"},
-		       			{state: "Northern Mariana Islands"}, 
-		       			{state: "Ohio"}
-					]
-					//Not Allocated
-					[
-						{state: "Arizona"}, 
-						{state: "Utah"}, 
-						{state: "Wisconsin"}, 
-						{state: "New York"}, 
-						{state: "Connecticut"}, 
-						{state: "Delware"},
-		       			{state: "Maryland"}, 
-		       			{state: "Pennsylvania"}, 
-		       			{state: "Rhode Island"}, 
-		       			{state: "Indiana"}, 
-		       			{state: "Nebraska"},
-		       			{State: "West Virginia"}, 
-		       			{state: "Oregon"}, 
-		       			{state: "Washington"}, 
-		       			{state: "Califorinia"}, 
-		       			{state: "Montana"},
-		       			{state: "New Jersey"}, 
-		       			{state: "New Mexico"}, 
-		       			{state: "South Dakota"}
-					]
-				]
-				//Democrats
-				[
-					//Allocated
-					[
-						{state: "Iowa"}, 
-						{state: "New Hamphsire"}, 
-						{state: "Nevada"}, 
-						{state: "South Carolina"}, 
-						{state: "Alabama"}, 
-						{state: "Arkansas"},
-		       			{state: "Colorado"}, 
-		       			{state: "Georgia"}, 
-		       			{state: "Massachuetts"}, 
-		       			{state: "Minnesota"}, 
-		       			{state: "Oklahoma"}, 
-		       			{state: "Tennessee"},
-		       			{state: "Texas"}, 
-		       			{state: "Vermont"}, 
-		       			{state: "Virginia"}, 
-		       			{state: "American Somoa"}, 
-		       			{state: "Democrats Abroad"},
-		       			{state: "Kansas"}, 
-		       			{state: "Louisiana"}, 
-		       			{state: "Nebraska"}, 
-		       			{state: "Maine"}, 
-		       			{state: "Michigan"}, 
-		       			{state: "Mississippi"},
-		       			{state: "Northern Mariana Islands"}, 
-		       			{state: "Florida"}, 
-		       			{state: "Illinois"}, 
-		       			{state: "Missouri"},
-		       			{state: "North Carolina"}, 
-		       			{state: "Ohio"}
-					]
-					//Not Allocated
-					[
-						{state: "Arizona"}, 
-						{state: "Idaho"}, 
-						{state: "Utah"}, 
-						{state: "Alaska"}, 
-						{state: "Hawaii"}, 
-						{state: "Washington"}, 
-						{state: "Wisconsin"},
-		       			{state: "Wyoming"}, 
-		       			{state: "New York"}, 
-		       			{state: "Connecticut"}, 
-		       			{state: "Delware"}, 
-		       			{state: "Maryland"}, 
-		       			{state: "Pennsylvania"},
-		       			{state: "Rhode Island"}, 
-		       			{state: "Indiana"}, 
-		       			{state: "Guam"}, 
-		       			{state: "West Virginia"}, 
-		       			{state: "Kentucky"}, 
-		       			{state: "Oregon"},
-		       			{state: "Virgin Islands"}, 
-		       			{state: "Puerto Rico"}, 
-		       			{state: "California"}, 
-		       			{state: "Montana"}, 
-		       			{state: "New Jersey"},
-		       			{state: "New Mexico"}, 
-		       			{state: "North Dakota"}, 
-		       			{state: "South Dakota"}, 
-		       			{state: "Washington DC"}
+						{state: "Iowa", racount: 30, dacount: 52, rncount: 0, dncount:0},
+						{state: "New Hamphsire", racount: 23, dacount: 32, rncount: 0, dncount:0}, 
+						{state: "South Carolina", racount: 50, dacount: 59, rncount: 0, dncount:0}, 
+						{state: "Nevada", racount: 30, dacount: 43, rncount: 0, dncount:0},
+						{state: "Alabama", racount: 50, dacount: 60, rncount: 0, dncount:0},
+						***{state: "Alaska", racount: 28},
+		       			{state: "Arkansas", racount: 40, dacount: 37, rncount: 0, dncount:0}, 
+		       			{state: "Georgia", racount: 76, dacount: 116, rncount: 0, dncount:0}, 
+		       			{state: "Massachuetts", racount: 42, dacount: 116, rncount: 0, dncount:0}, 
+		       			{state: "Minnesota", racount: 38, dacount: 93, rncount: 0, dncount:0}, 
+		       			{state: "Oklahoma", racount: 43, dacount: 42, rncount: 0, dncount:0},
+		      	 		{state: "Tennessee", racount: 58, dacount: 76, rncount: 0, dncount:0}, 
+		      	 		{state: "Texas", racount: 155, dacount: 252, rncount: 0, dncount:0}, 
+		      	 		{state: "Vermont", racount: 16, dacount: 26, rncount: 0, dncount:0}, 
+		      	 		{state: "Virginia", racount: 49, dacount: 110, rncount: 0, dncount:0}, 
+		      	 		{state: "Kansas", racount: 40, dacount: 37, rncount: 0, dncount:0}, 
+		      	 		***{state: "Kentucky", racount: 46},
+		       			{state: "Louisiana", racount: 46, dacount: 58, rncount: 0, dncount:0}, 
+		       			{state: "Maine", racount: 23, dacount: 30, rncount: 0, dncount:0}, 
+		       			***{state: "Puerto Rico", racount: 23}, 
+		       			***{state: "Hawaii", racount: 19}, 
+		       			***{state: "Idaho", racount: 32}, 
+		       			{state: "Michigan", racount: 59, dacount: 147, rncount: 0, dncount:0},
+		       			{state: "Mississippi", racount: 40, dacount: 41, rncount: 0, dncount:0}, 
+		       			***{state: "Washington DC", racount: 19}, 
+		       			***{state: "Guam", racount: 9}, 
+		       			***{state: "Wyoming", racount: 29},
+		       			{state: "Florida", racount: 99, dacount: 246, rncount: 0, dncount:0}, 
+		       			{state: "Illinois", racount: 69, dacount: 182, rncount: 0, dncount:0}, 
+		       			{state: "Missouri", racount: 52, dacount: 84, rncount: 0, dncount:0}, 
+		       			{state: "North Carolina", racount: 72, dacount: 121, rncount: 0, dncount:0},
+		       			{state: "Northern Mariana Islands", racount: 9, dacount: 11, rncount: 0, dncount:0}, 
+		       			{state: "Ohio", racount: 66, dacount: 159, rncount: 0, dncount:0},
+		       			{state: "Colorado", racount: 0, dacount: 79, rncount: 0, dncount:0},
+		       			***{state: "American Samoa", dacount: 10},
+		       			***{state: "Abroad", dacount: 17},
+		       			***{state: "Nebraska", dacount: 30},
+		       			***{state: "Arizona", rncount: 58}, 
+						***{state: "Utah", rncount: 40}, 
+						***{state: "Wisconsin", rncount: 42}, 
+						***{state: "New York", rncount: 95}, 
+						***{state: "Connecticut", rncount: 28}, 
+						***{state: "Delware", rncount: 16},
+		       			***{state: "Maryland", rncount: 38}, 
+		       			***{state: "Pennsylvania", rncount: 71}, 
+		       			***{state: "Rhode Island", rncount: 19}, 
+		       			***{state: "Indiana", rncount: 57}, 
+		       			***{state: "Nebraska", rncount: 36},
+		       			***{state: "West Virginia", rncount: 34}, 
+		       			***{state: "Oregon", rncount: 28}, 
+		       			***{state: "Washington", rncount: 44}, 
+		       			***{state: "Califorinia", rncount: 172}, 
+		       			***{state: "Montana", rncount: 27},
+		       			***{state: "New Jersey", rncount: 51}, 
+		       			***{state: "New Mexico", rncount: 24}, 
+		       			***{state: "South Dakota", rncount: 29}
 					]
 				]
-			]
-var totals = [[1489, 983, 2472], [2366, 2397, 4763]];
-var allocatedTotals = [[30, 23, 50, 30, 50, 28, 40, 76, 42, 38, 43, 58, 155, 16, 49, 40, 46, 46, 23,
-		     23, 19, 32, 59, 40, 19, 9, 29, 99, 69, 52, 72, 9, 66],
-		    [52, 32, 43, 59, 60, 37, 79, 116, 116, 93, 42, 76, 252, 26, 110, 10, 17, 37, 58,
-		     30, 30, 147, 41, 11, 246, 182, 84, 121, 159]];
-var notAllocatedTotals = [[58, 40, 42, 95, 28, 16, 38, 71, 19, 57, 36, 34, 28, 44, 172, 27, 51, 24, 29],
-		    [85, 27, 37, 20, 34, 118, 96, 18, 291, 70, 31, 118, 210, 33, 92, 12, 37, 61, 74,
-		     12, 67, 546, 27, 142, 43, 23, 25, 45]
-		   ];
+					//Not Allocated
+					[
+						{state: "Arizona", dncount: 85}, 
+						{state: "Idaho", dncount: 27}, 
+						{state: "Utah", dncount: 37}, 
+						{state: "Alaska", dncount: 20}, 
+						{state: "Hawaii", dncount: 34}, 
+						{state: "Washington", dncount: 118}, 
+						{state: "Wisconsin", dncount: 96},
+		       			{state: "Wyoming", dncount: 18}, 
+		       			{state: "New York", dncount: 291}, 
+		       			{state: "Connecticut", dncount: 70}, 
+		       			{state: "Delware", dncount: 31}, 
+		       			{state: "Maryland", dncount: 118}, 
+		       			{state: "Pennsylvania", dncount: 210},
+		       			{state: "Rhode Island", dncount: 33}, 
+		       			{state: "Indiana", dncount: 92}, 
+		       			{state: "Guam", dncount: 12}, 
+		       			{state: "West Virginia", dncount: 37}, 
+		       			{state: "Kentucky", dncount: 61}, 
+		       			{state: "Oregon", dncount: 74},
+		       			{state: "Virgin Islands", dncount: 12}, 
+		       			{state: "Puerto Rico", dncount: 67}, 
+		       			{state: "California", dncount: 546}, 
+		       			{state: "Montana", dncount: 27}, 
+		       			{state: "New Jersey", dncount: 142},
+		       			{state: "New Mexico", dncount: 43}, 
+		       			{state: "North Dakota", dncount: 23}, 
+		       			{state: "South Dakota", dncount: 25}, 
+		       			{state: "Washington DC", dncount: 45}
+					]
+				]
+			];
+
 
 d3.select(".chart")
     .selectAll("div")
-    .data(party, allocated, notAllocated, totals, allocatedTotals, notAllocatedTotals)
+    .data(data)
     .enter().append("div")
     .style("width", function(d) {
-	   return d.count * 7 + "px";
-    })
+    	for (var i = 0; i < data.length; i++) {
+    		for (var j = 0; j < data[i].length; j++) {
+    			return d.count * 7 +"px";
+    		}
+    	}
+    });
+    /*
     .style("background-color", function(d) {
         if (d.allocated != 0) {
             return "green";
@@ -151,8 +115,13 @@ d3.select(".chart")
             return "black";
         }
     })
+    */
     .text(function(d) {
-        return d.state + ": " + d.count;
+    	for (var i = 0; i < data.length; i++) {
+    		for (var j = 0; j < data[i].length; j++) {
+    			return d.state + ": "d.count;
+    		}
+    	}
     });
 
 
@@ -166,7 +135,7 @@ d3.select(".chart")
 
 
 
-
+/*
 var counter = 1;
 var createbars = function() {
     counter = (counter + 1) % 2
@@ -209,3 +178,4 @@ var createbars = function() {
 
 document.getElementById("switch").addEventListener("click", createbars);
 createbars();
+*/
