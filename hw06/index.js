@@ -96,20 +96,37 @@ var data = [
 					]
 					//Not Allocated
 					[
-
+						{state: "Arizona"}, 
+						{state: "Idaho"}, 
+						{state: "Utah"}, 
+						{state: "Alaska"}, 
+						{state: "Hawaii"}, 
+						{state: "Washington"}, 
+						{state: "Wisconsin"},
+		       			{state: "Wyoming"}, 
+		       			{state: "New York"}, 
+		       			{state: "Connecticut"}, 
+		       			{state: "Delware"}, 
+		       			{state: "Maryland"}, 
+		       			{state: "Pennsylvania"},
+		       			{state: "Rhode Island"}, 
+		       			{state: "Indiana"}, 
+		       			{state: "Guam"}, 
+		       			{state: "West Virginia"}, 
+		       			{state: "Kentucky"}, 
+		       			{state: "Oregon"},
+		       			{state: "Virgin Islands"}, 
+		       			{state: "Puerto Rico"}, 
+		       			{state: "California"}, 
+		       			{state: "Montana"}, 
+		       			{state: "New Jersey"},
+		       			{state: "New Mexico"}, 
+		       			{state: "North Dakota"}, 
+		       			{state: "South Dakota"}, 
+		       			{state: "Washington DC"}
 					]
 				]
 			]
-var allocated = 
-		      []
-		     ];
-var notAllocated = [[],
-		      ["Arizona", "Idaho", "Utah", "Alaska", "Hawaii", "Washington", "Wisconsin",
-		       "Wyoming", "New York", "Connecticut", "Delware", "Maryland", "Pennsylvania",
-		       "Rhode Island", "Indiana", "Guam", "West Virginia", "Kentucky", "Oregon",
-		       "Virgin Islands", "Puerto Rico", "California", "Montana", "New Jersey",
-		       "New Mexico", "North Dakota", "South Dakota", "Washington DC"]
-		     ];
 var totals = [[1489, 983, 2472], [2366, 2397, 4763]];
 var allocatedTotals = [[30, 23, 50, 30, 50, 28, 40, 76, 42, 38, 43, 58, 155, 16, 49, 40, 46, 46, 23,
 		     23, 19, 32, 59, 40, 19, 9, 29, 99, 69, 52, 72, 9, 66],
