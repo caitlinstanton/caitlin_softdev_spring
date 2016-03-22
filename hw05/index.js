@@ -1,17 +1,4 @@
-// var delegates = [58, 18, 10, 75, 37];
 
-
-// d3.select(".chart")
-//     .selectAll("div")
-//       .data(delegates)
-//     .enter().append("div")
-//       .style("width", function(d) {
-//           return d*10 + "px"; })
-//       .text(function(d) { return d; })
-
-// d3.select("body").append("p").text("New paragarph!");
-
-//IDEA: PUT THESE IN A CSV FILE, THEN LOAD IT IN
 var republicans = [
     {state: "IA", count: 30, allocated: 16},
     {state: "NH", count: 23, allocated: 18}, 
@@ -65,6 +52,61 @@ var republicans = [
     {state: "SD", count: 29, allocated: 0}
 ];
 
+/*
+var democrats = [
+    {state: "IA", count: 52, allocated: 'yes'},
+    {state: "NH", count: 32, allocated: 'yes'}, 
+    {state: "SC", count: 59, allocated: 'yes'},
+    {state: "NV", count: 43, allocated: 'yes'},
+    {state: "AL", count: 60, allocated: 'yes'},
+    {state: "AK", count: 20, allocated: 'yes'},
+    {state: "AR", count: 37, allocated: 'yes'},
+    {state: "GA", count: 116, allocated: 'yes'},
+    {state: "MA", count: 116, allocated: 'yes'},
+    {state: "MN", count: 93, allocated: 'yes'},
+    {state: "OK", count: 42, allocated: 'yes'},
+    {state: "TN", count: 76, allocated: 'yes'},
+    {state: "TX", count: 252, allocated: 'yes'},
+    {state: "VT", count: 26, allocated: 'yes'}, 
+    {state: "VA", count: 110, allocated: 'yes'},
+    {state: "KS", count: 37, allocated: 'yes'},
+    {state: "KY", count: 61, allocated: 'no'},
+    {state: "LA", count: 58, allocated: 'yes'},
+    {state: "ME", count: 30, allocated: 'yes'},
+    {state: "HI", count: 34, allocated: 'no'},
+    {state: "ID", count: 27, allocated: 'no'},
+    {state: "MI", count: 147, allocated: 'yes'},
+    {state: "MS", count: 41, allocated: 'yes'},
+    {state: "WY", count: 18, allocated: 'no'},
+    {state: "FL", count: 246, allocated: 'yes'},
+    {state: "IL", count: 182, allocated: 'yes'},
+    {state: "MO", count: 84, allocated: 'yes'},
+    {state: "NC", count: 121, allocated: 'yes'},
+    {state: "OH", count: 159, allocated: 'yes'},
+    {state: "AZ", count: 85, allocated: 'no'},
+    {state: "UT", count: 37, allocated: 'no'},
+    {state: "ND", count: 23, allocated: 'no'},
+    {state: "WI", count: 96, allocated: ,'no'},
+    {state: "CO", count: 79, allocated: 0},
+    {state: "NY", count: 291, allocated: 0},
+    {state: "CT", count: 70, allocated: 0},
+    {state: "DE", count: 31, allocated: 0},
+    {state: "MD", count: 118, allocated: 0},
+    {state: "PA", count: 210, allocated: 0},
+    {state: "RI", count: 33, allocated: 0},
+    {state: "IN", count: 92, allocated: 0},
+    {state: "NE", count: 30, allocated: 0},
+    {state: "WV", count: 37, allocated: 0},
+    {state: "OR", count: 74, allocated: 0},
+    {state: "WA", count: 118, allocated: 0},
+    {state: "CA", count: 546, allocated: 0},
+    {state: "MT", count: 27, allocated: 0},
+    {state: "NJ", count: 142, allocated: 0},
+    {state: "NM", count: 43, allocated: 0},
+    {state: "SD", count: 25, allocated: 0}
+];
+*/
+
 d3.select(".chart")
     .selectAll("div")
     .data(republicans)
@@ -83,5 +125,6 @@ d3.select(".chart")
         return d.state + ": " + d.count;
     });
 
+d3.select("#transition").on("click", function(d) {
 
-    
+})
