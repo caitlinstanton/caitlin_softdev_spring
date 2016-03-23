@@ -84,7 +84,7 @@ d3.select(".chart")
     })
     .style("background-color", function(d) {
     	if (d.racount > 0 || d.dacount > 0) {
-    		return "red";
+    		return "green";
     	} else {
     		return "black";
     	}
@@ -92,6 +92,13 @@ d3.select(".chart")
 
 
 function change() {
+	d3.select(".chart")
+		.transition()
+		.delay(2500)
+		.selectAll("div")
+		.style("background-color", "red");
+
+			/*
 	d3.select(".chart")
 		.selectAll("div")
 		.remove()
@@ -113,6 +120,7 @@ function change() {
     			return "black";
     		}
     	});
+    */
 }
 
 document.getElementById("transition").addEventListener("click", change());
