@@ -59,11 +59,60 @@ var data = [
 						{state: "North Dakota", racount: 0, dacount:0, rncount: 0, dncount: 23}
 			];
 
+/*
+var parties = ["Republican", "Democrat"];
 
+var counter = 0;
+d3.select("title")
+	.selectAll("div")
+	.data(parties)
+	.enter().append("text")
+	.text(function(d) {
+		counter = (counter + 1) % 2;
+		return parties[counter];
+	});
+*/
 d3.select(".chart")
     .selectAll("div")
     .data(data)
     .enter().append("div")
     .style("width", function(d) {
-    	return (d.racount + d.dacount + d.rncount + d.dncount) * 5 + "px";
+    	return (d.racount + d.rncount) * 7 + "px";
+    })
+    .text(function(d) {
+    	return d.state + ": " + (d.racount + d.dacount + d.rncount + d.dncount);
+    })
+    .style("background-color", function(d) {
+    	if (d.racount > 0 || d.dacount > 0) {
+    		return "red";
+    	} else {
+    		return "black";
+    	}
     });
+
+
+function change() {
+	d3.select(".chart")
+		.selectAll("div")
+		.remove()
+		.transition()
+		.delay(2500)
+		.selectAll("div")
+		.data(data)
+    	.enter().append("div")
+    	.style("width", function(d) {
+    		return (d.dacount + d.dncount) * 7 + "px";
+    	})
+    	.text(function(d) {
+    		return d.state + ": " + (d.racount + d.dacount + d.rncount + d.dncount);
+    	})
+    	.style("background-color", function(d) {
+    		if (d.racount > 0 || d.dacount > 0) {
+    			return "blue";
+    		} else {
+    			return "black";
+    		}
+    	});
+}
+
+document.getElementById("transition").addEventListener("click", change());
