@@ -105,3 +105,18 @@ A Python decorator encapsulates a closure
 
 A decorator allows to transparently wrap functionality
 """
+
+#####
+
+import random
+
+def htmler(f):
+    def inner():
+        name =()
+        return "<html>" + name + "</html>"
+    return inner
+
+@htmler
+def getName():
+    names = ['tom','sue','harry','lisa','sarah','horatio']
+    return random.choice(names)
