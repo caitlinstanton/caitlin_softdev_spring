@@ -5,12 +5,14 @@ def inc(x):
 def dec(x):
     return x - 1
 
-#f = inc
-#print f(x)
+f = inc
+print f(x)
 
 flist = [inc, dec]
 
 print flist[1](5)
+
+#####
 
 #a simple closure in Python
 def makeAdder(n):
@@ -24,9 +26,9 @@ add5 = makeAdder(5)
 add3(10)
 add5(10) 
 
+#####
 
 #a clunky approach to class type abstraction
-
 def makeCounter():
     #private "instance" data
     #has to be a list due to weird python scoping rules
@@ -70,7 +72,7 @@ def dble(f):
     return name + name
 """
 
-###
+#####
 
 import random 
 
@@ -86,3 +88,20 @@ def getName():
     return random.choice(names)
 
 print getName()
+
+"""
+2nd eg will have demo return "hellohello" whenever we invoke it
+
+equiv to:
+getName = double(getName)
+
+TAKEAWAY:
+BAM!: can write fxns that transform fxns
+
+A Python decorator is merely shorthand for calling awrapper-type function like
+doubler
+
+A Python decorator encapsulates a closure
+
+A decorator allows to transparently wrap functionality
+"""
