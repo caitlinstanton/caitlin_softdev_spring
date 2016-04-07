@@ -20,7 +20,6 @@ def symm_diff(a,b):
 def cart_prod(a,b):
     coord = ()
     result = []
-    coord = tuple[(x,y) for x in a for y in b]
-    print coord 
+    print [(a[i],b[j]) for i in xrange(len(a)) for j in xrange(len(b))] 
 
 print cart_prod([1,2,3],[2,3,4])
