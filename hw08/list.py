@@ -22,4 +22,16 @@ def cart_prod(a,b):
     result = []
     print [(a[i],b[j]) for i in xrange(len(a)) for j in xrange(len(b))] 
 
-print cart_prod([1,2,3],[2,3,4])
+##CLASS CODE
+
+def cart_prod2(s1,s2):
+    result = []
+    for x in s1:
+        hold = [(x,a) for a in s2]
+        result += hold
+    return result
+
+def cart_prod3(a,b):
+    return [(x,y) for x in a for y in b]
+
+print cart_prod3([1,2,3],[2,3,4])
