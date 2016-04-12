@@ -1,5 +1,26 @@
 from flask import Flask, render_template, request, session, redirect, url_for
 import db_methods
+import time
+
+def metaFunc(f):
+    def meta(*args):
+        temp = f(*args)
+        # Changed to printing rather than returning because of recursive calls
+        print ("Function: " + f.func_name +
+               "\nArguments: " + str([arg for arg in args]) +
+               "\nValue: " + str(temp))
+        return temp
+    return meta
+
+
+def timeFunc(f):
+    starting = time.time()
+
+    def timer(*args):
+        temp = f(*args)
+        print "Time: " + str(time.time() - starting)
+        return temp
+    return timer
 
 app = Flask(__name__)
 
@@ -21,19 +42,32 @@ def blog():
         else:
             return render_template("blog.html", loggedIn = False, blogs = blogs)
 
+
+@timeFunc
+@metaFunc
+def fib(n):
+    if n <= 2:
+        return 1
+    else:
+        return fib(n - 1) + fib(n - 2)
+
 @app.route("/login", methods = ["GET", "POST"])
 def login():
     if request.form.has_key("username") and request.form.has_key("password"):
         if db_methods.checkUser(request.form["username"], request.form["password"]):
             session["loggedIn"] = True
             session["username"] = request.form["username"]
+            print fib(5)
             return redirect(url_for("blog"))
         else:
+            print fib(5)
             return render_template("login.html", error = "Invalid username or password")
     else:
         if session.has_key("loggedIn") and session["loggedIn"]:
+            print fib(5)
             return redirect(url_for("blog"))
         else:
+            print fib(5)
             return render_template("login.html")
 
 @app.route("/signup", methods = ["GET", "POST"])
