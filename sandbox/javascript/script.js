@@ -19,15 +19,27 @@ var f1 = {
 var count = 0;
 var inc = function makeIncrementer() {
 	count++;
-	console.log(count);
+	return count;
+}
+
+var makeAdder = function(n) {
+	n++;
+	return n;
 }
 
 /*
-var makeIncrementer = function() {
+var makeIncrementer2 = function() {
 	var x = 0;
 	return function() {
 		x = x + 1;
 		return x;
+	}
+}
+
+var makeAdder2 = function(n) {
+	return function() {
+		n = n + 1;
+		return n;
 	}
 }
 */
