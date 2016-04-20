@@ -27,19 +27,56 @@ var makeAdder = function(n) {
 	return n;
 }
 
-/*
+var x = 0;
 var makeIncrementer2 = function() {
-	var x = 0;
-	return function() {
+	var inner = function() {
 		x = x + 1;
 		return x;
 	}
+	return inner();
 }
 
 var makeAdder2 = function(n) {
-	return function() {
-		n = n + 1;
-		return n;
+	var x = n;
+	var inner = function() {
+		x = x + 1;
+		return x;
+	}
+	return inner(n);
+}
+
+//CLASSCODE
+var makeAdder3 = function(n) {
+	return function(x) {
+		return x + n;
 	}
 }
-*/
+
+var add3 = makeAdder3(3);
+
+var makeCounter = function() {
+	var i = 0;
+	return {
+		x: "this is a string in dictionary",
+		set: function(x) {
+			i = x;
+			return "variable set!";
+		}, 
+		get: function() {
+			return i;
+		},
+		inc: function() {
+			i = i + 1;
+			return "variable increased!";
+		},
+		dec: function() {
+			i = i - 1;
+			return "variable decreased!";
+		},
+		setx: function(n) {
+			this.x = n;
+		}
+	}
+}
+
+var a = makeCounter();
